@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Student File</title>
+    <link rel="stylesheet" href="{% static 'analytics/style.css' %}">
+</head>
+
+<body>
+
+    <h2>Upload Student Marks File</h2>
+
+    {% if message %}
+        <p style="color: green;"><strong>{{ message }}</strong></p>
+    {% endif %}
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
+
+    <br>
+    <a href="{% url 'dashboard' %}">Go to Dashboard</a>
+
+</body>
+</html>

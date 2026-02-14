@@ -1,0 +1,157 @@
+/* =========================
+Global Styling
+========================= */
+
+body {
+font-family: 'Segoe UI', sans-serif;
+background: linear-gradient(135deg, #667eea, #764ba2);
+margin: 0;
+padding: 40px 20px;
+color: #333;
+}
+
+/* =========================
+Container Card
+========================= */
+
+.container {
+width: 85%;
+margin: auto;
+background: rgba(255, 255, 255, 0.15);
+backdrop-filter: blur(15px);
+padding: 40px;
+border-radius: 20px;
+box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.25);
+animation: fadeIn 0.8s ease-in-out;
+}
+
+/* =========================
+Headings
+========================= */
+
+h1, h2 {
+text-align: center;
+color: white;
+letter-spacing: 1px;
+margin-bottom: 20px;
+}
+
+/* =========================
+Stats Text
+========================= */
+
+p {
+font-size: 16px;
+font-weight: 500;
+color: #f1f1f1;
+text-align: center;
+}
+
+/* =========================
+Buttons
+========================= */
+
+button {
+background: linear-gradient(45deg, #ff6a00, #ee0979);
+color: white;
+border: none;
+padding: 12px 22px;
+border-radius: 30px;
+cursor: pointer;
+font-size: 15px;
+transition: 0.3s ease;
+box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+button:hover {
+transform: translateY(-3px) scale(1.05);
+box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* =========================
+Links
+========================= */
+
+a {
+display: inline-block;
+margin-top: 15px;
+color: #ffffff;
+font-weight: bold;
+transition: 0.3s;
+}
+
+a:hover {
+color: #ffdd57;
+transform: scale(1.05);
+}
+
+/* =========================
+Table Styling
+========================= */
+
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 30px;
+overflow: hidden;
+border-radius: 15px;
+background: white;
+box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+}
+
+table th {
+background: linear-gradient(45deg, #ff6a00, #ee0979);
+color: white;
+padding: 14px;
+font-size: 15px;
+text-transform: uppercase;
+}
+
+table td {
+padding: 12px;
+text-align: center;
+font-weight: 500;
+}
+
+table tr {
+transition: 0.2s ease;
+}
+
+table tr:hover {
+background: #f4f4f4;
+transform: scale(1.01);
+}
+
+/* =========================
+Graph Image
+========================= */
+
+img {
+    display: block;
+    margin: 30px auto;
+    max-width: 65%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+
+img:hover {
+transform: scale(1.03);
+}
+
+/* =========================
+Animations
+========================= */
+
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}

@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Analytics Dashboard</title>
+    <link rel="stylesheet" href="{% static 'analytics/style.css' %}">
+</head>
+
+<body>
+
+    <h2>Student Performance Dashboard</h2>
+
+    {% if message %}
+        <p style="color:red;"><strong>{{ message }}</strong></p>
+    {% endif %}
+
+    {% if total_students %}
+        <p><strong>Total Students:</strong> {{ total_students }}</p>
+        <p><strong>Topper:</strong> {{ topper }}</p>
+        <p><strong>Fail Percentage:</strong> {{ fail_percent }}%</p>
+
+        <h3>Subject Average Graph</h3>
+        <img src="data:image/png;base64,{{ graph }}" alt="Graph">
+
+        <h3>Student Rankings</h3>
+
+        <table border="1" cellpadding="5">
+            <tr>
+                <th>Name</th>
+                <th>Maths</th>
+                <th>Science</th>
+                <th>English</th>
+                <th>Computer</th>
+                <th>Total</th>
+                <th>Rank</th>
+            </tr>
+
+            {% for student in students %}
+            <tr>
+                <td>{{ student.name }}</td>
+                <td>{{ student.maths }}</td>
+                <td>{{ student.science }}</td>
+                <td>{{ student.english }}</td>
+                <td>{{ student.computer }}</td>
+                <td>{{ student.total }}</td>
+                <td>{{ student.rank }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    {% endif %}
+
+    <br>
+    <a href="{% url 'upload' %}">Upload New File</a>
+
+</body>
+</html>
